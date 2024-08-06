@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Photography School Courses</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+<body>
+<main>
+    <section id="home" class="hero">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 style="font-size: 60px; font-weight: lighter;">Unit 5 - what is ISO?</h1>
+    </section>
+    <div class="container">
+        <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+        <div class="sidebar">
+            <br><br>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="beginner.html">Beginner</a></li>               
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="unitcontent">
+        <p style="font-size: large;">In this lesson, we will delve into ISO, an essential setting in digital photography that influences your camera's sensitivity to light. Mastering ISO helps you achieve better exposures in varying lighting conditions.
+        </p>
+
+
+        <h2>Understanding ISO</h2>
+        <p>ISO stands for International Organization for Standardization, but in photography, it refers to the sensitivity of your camera’s sensor to light. It is measured in numbers, such as ISO 100, 200, 400, 800, 1600, etc. Lower numbers indicate lower sensitivity and higher numbers indicate higher sensitivity.</p>
+        <div class="unitcontentimg"> </div>
+        <h2>Low ISO</h2>
+        <p>A low ISO setting (e.g., ISO 100 or 200) is ideal for bright lighting conditions, such as outdoors on a sunny day. It produces high-quality images with minimal noise (graininess).
+        </p>
+        <div class="unitcontentimg"> </div>
+        <h2>High ISO</h2>
+        <p>A high ISO setting (e.g., 800 or 1600) is ideal for dimmer lighting conditions, such as indoors or underwater. It produces low-quality images with more noise (graininess).
+        </p>
+        <div class="unitcontentimg"> </div>
+        <h2>Balancing Exposure</h2>
+        <p>ISO, along with shutter speed and aperture, is part of the exposure triangle. When you increase ISO, you can use faster shutter speeds or smaller apertures. Conversely, lowering ISO requires slower shutter speeds or larger apertures to maintain the correct exposure.</p>
+        <h2>Try it Yourself</h2>
+        <ol>
+            <li>Low ISO: Set your camera to ISO 100 or 200. Capture photos outdoors in bright sunlight to see the clarity and lack of noise.
+            </li>
+            <li>High ISO: Switch to ISO 800 or higher. Take photos in a dimly lit room or at night and notice the increase in noise but improved exposure.</li>
+        </ol>
+    </div>
+
+    <div class="unitnext">
+        <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or
+            quiz? </h1>
+        <button class="unitnextbtn" onclick="nextunit('intermediate', 1)">Next unit</button>
+        <dialog id="quiz-dialog">
+            <div class="quiztopcontainer">
+                <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+            </div>
+    
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <h1 id="question">Loading...</h1>
+                </div>
+                <div class="quiz-optionscontainer">
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                </div>
+    
+                <div id="results">
+                    <h1 id="results-announcement">Score = <span id="score"> 0</span></h1>
+                    <h3 id="correct">&#x2713
+                        <br>
+                        congrats! you got it right!
+                    </h3>
+                    <h3 id="wrong"> &#x2715
+                        <br>
+                        sorry! You got it wrong.
+                    </h3>
+                    <h3 id="finished">
+                        Congratulations! You have finished all questions.
+                    </h3>
+                    <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                </div>
+        </dialog>
+        <button onclick="openDialog('beginnerUnit4')" id="quizopenbtn">Start Quiz</button>
+        </div>
+    </div>
+</main>
+<script src="unitscrpits.js"></script>
+</body>
+</html>

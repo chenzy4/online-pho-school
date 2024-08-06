@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two Daughter Divs</title>
+<style>
+  .parent {
+    width: 100%; /* Set width for demonstration */
+    height: 200px; /* Set height for demonstration */
+    background-color: #f0f0f0; /* Background color for the parent div */
+    display: flex; /* Use flexbox to align daughter divs */
+  }
+  .daughter {
+    width: 50%; /* Each daughter div takes up 50% of the width */
+    height: 100%; /* Each daughter div takes up full height of the parent */
+    background-color: #ccc; /* Background color for the daughter divs */
+    border: 1px solid #999; /* Border for the daughter divs */
+  }
+</style>
+</head>
+<body>
+
+<div class="parent">
+  <div class="daughter"></div>
+  <div class="daughter"></div>
+</div>
+
+</body>
+</html>

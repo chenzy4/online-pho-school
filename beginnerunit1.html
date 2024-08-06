@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Online Photography School Courses</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+
+<body>
+    <main>
+        <section id="home" class="hero">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <h1 style="font-size: 60px; font-weight: 100;">Unit 1</h1>
+        </section>
+        <div class="container">
+            <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+            <div class="sidebar">
+                <br><br>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">course</a></li>
+                    <li><a href="beginner.html">Beginner</a></li>
+                    <li><a href="intermediate.html">Intermediate</a></li>
+                    <li><a href="advanced.html">Advanced</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unitcontent">
+            <p style="font-size: large;">Welcome to the first lesson! In this lesson, you will start with Program Mode
+                (P mode) and Auto Focus Mode. These settings are designed to help you get familiar with the basics of
+                photography, allowing you to understand how to take well-exposed photos with your camera. By the end of
+                this lesson, you will have a solid foundation on how to use these modes effectively to capture great
+                images.</p>
+
+            <h2>Understanding Program Mode (P Mode)</h2>
+            <p>Program Mode, or P Mode, is a semi-automatic mode on your camera. It automatically sets the aperture and
+                shutter speed for you, allowing you to focus on framing your shot and composing your photo. This mode is
+                ideal for beginners as it offers a good balance between control and convenience.</p>
+            <div class="unitcontentimg" style="background-image: url(images/camera-7889301.jpg);"> </div>
+            <h2>Understanding Auto Focus Mode</h2>
+            <p>Auto Focus Mode helps your camera automatically focus on the subject in the frame. This mode is
+                particularly useful when shooting moving subjects or in situations where you need to quickly capture a
+                moment.</p> 
+            <div class="unitcontentimg" style="background-image: url(images/nikon-2202274_1920.jpg);"> </div>
+            <h2>Try it yourself</h2>
+            <p>To operate Program Mode (P Mode) on your camera, turn the mode dial to 'P.' In this mode, the camera
+                automatically sets the aperture and shutter speed, but you can still adjust settings like ISO, white
+                balance, and exposure compensation as needed.
+                For Auto Focus (AF) Mode, switch the camera to 'AF' using the focus mode switch on the lens or camera
+                body. If your lens has a switch labeled 'AF/MF,' set it to 'AF.'
+                Some older or manual lenses might not support autofocus, in which case you would need to manually focus
+                by rotating the focus ring on the lens. In the camera menu, you can also select different focus areas or
+                modes,
+                such as single-point AF, dynamic area AF, or auto-area AF, depending on your subject and shooting
+                situation.</p>
+        </div>
+
+        <div class="unitnext">
+            <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or
+                quiz? </h1>
+            <button class="unitnextbtn" onclick="nextunit('beginner', 2)">Next unit</button>
+            <dialog id="quiz-dialog">
+                <div class="quiztopcontainer">
+                    <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+                </div>
+
+                <div class="quiz-container">
+                    <div class="quiz-question">
+                        <h1 id="question">Loading...</h1>
+                    </div>
+                    <div class="quiz-optionscontainer">
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                        <button class="quiz-option"></button>
+                    </div>
+
+                    <div id="results">
+                        <h1 id="results-announcement">Score = <span id="score"> 0</span></h1>
+                        <h3 id="correct">&#x2713
+                            <br>
+                            congrats! you got it right!
+                        </h3>
+                        <h3 id="wrong"> &#x2715
+                            <br>
+                            sorry! You got it wrong.
+                        </h3>
+                        <h3 id="finished">
+                            Congratulations! You have finished all questions.
+                        </h3>
+                        <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                    </div>
+                </div>
+            </dialog>
+            <button onclick="openDialog('beginnerUnit1')" id="quizopenbtn">Start Quiz</button>
+        </div>
+    </main>
+    <script src="unitscrpits.js"></script>
+</body>
+
+</html>

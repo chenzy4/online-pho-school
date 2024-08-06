@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Photography School Courses</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+<body>
+<main>
+    <section id="home" class="hero">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 style="font-size: 60px; font-weight: lighter;">Unit 2 - What is focus?</h1>
+    </section>
+    <div class="container">
+        <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+        <div class="sidebar">
+            <br><br>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="beginner.html">Beginner</a></li>               
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="unitcontent" >
+        <p style="font-size: large;">In this unit, we will dive into the concept of focus, an essential aspect of photography. You will learn about different focus modes and how to achieve clarity in your photos.</p>
+        <h2>Understanding Focus</h2>
+        <p>Focus is the process of making adjustments to ensure that the subject of your photo is sharp and clear. You can achieve focus manually by turning the focus ring on your lens, or automatically by using your camera’s auto-focus feature.</p>
+        <div class="unitcontentimg" style="background-image: url(images/dslr-2308202.jpg);"> </div>
+        <h2>Understanding Clarity</h2>
+        <p>Clarity refers to the overall sharpness and definition of your photo. Ensuring your images are clear involves not only proper focus but also avoiding camera shake and using appropriate settings for the lighting conditions.</p>
+        <h2 class="cross" style="transform: translate(45%, 0);">&#x2715</h2>
+        <div class="unitcontentimg" style="background-image: url(images/leaf.jpg);"> </div>
+        <h2 class="tick" style="transform: translate(45%, 0);">&#x2713</h2>
+        <div class="unitcontentimg" style="background-image: url(images/_DSC1016.JPG);"> </div>
+        <h2>Try it yourself</h2>
+        <p>Practice using both manual and auto-focus modes. Switch to manual focus and use the focus ring to achieve sharpness. Then, switch to auto-focus and explore different AF modes (single-point, continuous, automatic). Take photos in various lighting conditions and review the sharpness and clarity.</p>
+
+    </div>
+
+    <div class="unitnext">
+        <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or
+            quiz? </h1>
+        <button class="unitnextbtn" onclick="nextunit('beginner', 3)">Next unit</button>
+        <dialog id="quiz-dialog">
+            <div class="quiztopcontainer">
+                <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+            </div>
+
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <h1 id="question">Loading...</h1>
+                </div>
+                <div class="quiz-optionscontainer">
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                    <button class="quiz-option"></button>
+                </div>
+
+                <div id="results">
+                    <h1 id="results-announcement">Score = <span id="score"> 0</span></h1>
+                    <h3 id="correct">&#x2713
+                        <br>
+                        congrats! you got it right!
+                    </h3>
+                    <h3 id="wrong"> &#x2715
+                        <br>
+                        sorry! You got it wrong.
+                    </h3>
+                    <h3 id="finished">
+                        Congratulations! You have finished all questions.
+                    </h3>
+                    <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+                </div>
+            </div>
+        </dialog>
+        <button onclick="openDialog('beginnerUnit2')" id="quizopenbtn">Start Quiz</button>
+    </div>
+</main>
+<script src="unitscrpits.js"></script>
+</body>
+</html>

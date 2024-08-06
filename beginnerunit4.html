@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Photography School Courses</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+<body>
+<main>
+    <section id="home" class="hero">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 style="font-size: 60px; font-weight: lighter;">Unit 4 - what is Shutter Speed?</h1>
+    </section>
+    <div class="container">
+        <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+        <div class="sidebar">
+            <br><br>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="beginner.html">Beginner</a></li>               
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="unitcontent">
+        <p style="font-size: large;">In this lesson, we will explore the concept of shutter speed and its impact on your photography. Understanding shutter speed is crucial for capturing both motion and stillness in your images.</p>
+        <h2>Understanding Shutter Speed</h2>
+        <p>Shutter speed refers to the length of time your camera’s shutter is open, exposing light onto the camera sensor. It's measured in seconds or fractions of a second, such as 1/1000, 1/500, 1/250, 1/125, 1/60, 1/30, and so on. A faster shutter speed (e.g., 1/1000) freezes motion, while a slower shutter speed (e.g., 1/30) can create motion blur.</p>
+        <div class="unitcontentimg"> </div>
+        <h2>Freezing Motion</h2>
+        <p>Using a fast shutter speed, like 1/1000 or higher, is ideal for freezing fast-moving subjects such as sports, wildlife, or any action scenes. It ensures that the moving subject appears sharp and without blur.</p>
+        <div class="unitcontentimg"> </div>
+        <h2>Creating Motion Blur</h2>
+        <p>Slower shutter speeds, such as 1/60 or slower, are used to create motion blur, which can add a sense of movement and dynamism to your photos. This technique is often used in waterfall photography, capturing the flow of water, or in light trail photography to capture the movement of lights in the dark.
+        </p>
+        <h2>Balancing Exposure</h2>
+        <p>Shutter speed also plays a critical role in exposure. A fast shutter speed reduces the amount of light reaching the sensor, leading to darker images. Conversely, a slow shutter speed allows more light, resulting in brighter images. Balancing shutter speed with aperture and ISO is essential to achieve the correct exposure.</p>
+        <div class="unitcontentimg"> </div>
+        <h2>Try it yourself</h2>
+        <ol>
+            <li>Fast Shutter Speed: Set your camera to Shutter Priority mode (S or Tv) and choose a fast shutter speed (e.g., 1/1000). Capture fast-moving subjects like cars, running pets, or sports activities.
+            </li>
+            <li>Slow Shutter Speed: Switch to a slower shutter speed (e.g., 1/30). Try capturing the movement of water in a stream or creating light trails from passing cars at night.</li>
+        </ol>
+  </div>
+
+  <div class="unitnext">
+    <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or
+        quiz? </h1>
+    <button class="unitnextbtn" onclick="nextunit('beginner', 5)">Next unit</button>
+    <dialog id="quiz-dialog">
+        <div class="quiztopcontainer">
+            <button onclick="closeDialog()" id="quiz-closebtn">Close</button>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-question">
+                <h1 id="question">Loading...</h1>
+            </div>
+            <div class="quiz-optionscontainer">
+                <button class="quiz-option"></button>
+                <button class="quiz-option"></button>
+                <button class="quiz-option"></button>
+                <button class="quiz-option"></button>
+            </div>
+
+            <div id="results">
+                <h1 id="results-announcement">Score = <span id="score"> 0</span></h1>
+                <h3 id="correct">&#x2713
+                    <br>
+                    congrats! you got it right!
+                </h3>
+                <h3 id="wrong"> &#x2715
+                    <br>
+                    sorry! You got it wrong.
+                </h3>
+                <h3 id="finished">
+                    Congratulations! You have finished all questions.
+                </h3>
+                <button id="quiz-next" onclick="navigateNextQuestion()">Next</button>
+            </div>
+    </dialog>
+    <button onclick="openDialog('beginnerUnit4')" id="quizopenbtn">Start Quiz</button>
+    </div>
+</div>
+</main>
+<script src="unitscrpits.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main id="index-main">
+      <section
+        id="home"
+        class="hero"
+        style="background-image: url(images/_DSC2509.jpg)"
+      >
+        <header>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        <h1 style="font-size: 60px; font-weight: 100">About Me</h1>
+        <p id="fade-in-text" class="aboutintro">
+          I am a Year 12 photography student from Papanui High School. This
+          website is dedicated to help everyone to enhance their photography
+          skills. I hope you find this website useful.
+        </p>
+      </section>
+      <section class="portfolio">
+        <h1>My Portfolio</h1>
+        <p
+          id="fade-in-text"
+          style="transform: translate(0, 50vh); position: absolute"
+        >
+          "it is not always we have to do more, but rather that we have to focus
+          on less"
+        </p>
+        <br />
+        <p id="fade-in-text" style="transform: translate(0, 55vh)">
+          - Nathan W Morris
+        </p>
+        <img
+          class="fade-in"
+          src="images/wanaka copy.jpg"
+          style="height: 30vh; transform: translate(-80%, 10vh)"
+        />
+        <img
+          class="fade-in"
+          src="images/_DSC2381_1.JPG"
+          style="height: 25vh; transform: translate(80%, 10vh)"
+        />
+        <img
+          class="fade-in"
+          src="images/_DSC1807.jpg"
+          style="height: 25vh; transform: translate(-5%, 70vh)"
+        />
+        <img
+          class="fade-in"
+          src="images/_DSC1598.jpg"
+          style="height: 30vh; transform: translate(-130%, 55vh)"
+        />
+        <img
+          class="fade-in"
+          src="images/_DSC2351.JPG"
+          style="height: 30vh; transform: translate(110%, 55vh)"
+        />
+      </section>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const textElement = document.getElementById("fade-in-text");
+        console.log("working");
+        if (textElement) {
+          textElement.style.opacity = "1";
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const fadeInElements = document.querySelectorAll(".fade-in");
+
+        const handleScroll = () => {
+          fadeInElements.forEach((element) => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              element.classList.add("visible");
+            }
+          });
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Trigger the function on page load
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Photography School Courses</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+    <section id="home" class="courses-hero">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 style="font-size: 60px; font-weight: lighter;">Online Photography School</h1>
+    </section>
+    <div class="sidebar_container">
+        <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+        <div class="sidebar">
+            <br><br>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="beginner.html">Beginner</a></li>               
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <section class="courses_selection">
+        <h1>Choose the course you would like to take</h1>
+
+        <div class="courses_selection_boxes">
+            <div class="courses_selection_box" style="background-image: url('images/DSC_9540.jpg');   background-position: center;
+            background-size: cover;" >     
+                <a href="beginner.html"> Beginner</a>
+            </div>    
+            <div class="courses_selection_box" style="background-image: url('images/_DSC2444.JPG');   background-position: center;
+            background-size: cover;"> 
+                <a href="intermediate.html">Intermediate</a>
+            </div>
+            <div class="courses_selection_box" style="background-image: url('images/_DSC2163.JPG');   background-position: center;
+            background-size: cover;">    
+                <a href="advanced.html">Advanced</a>
+            </div>
+        </div>
+        <div class="three-part-hr">
+            <div class="hrs">
+                <ul style="list-style-type:none;">
+                    <li>ISO</li>
+                    <li>Aperature</li>
+                    <li>Shutter speed</li>
+                </ul>
+            </div>
+            <div class="hrs">
+                <ul style="list-style-type:none;">
+                    <li>Composition</li>
+                    <li>Aesthetics</li>
+                    <li>Retouching</li>
+                </ul>
+            </div>
+            <div class="hrs">
+                <ul style="list-style-type:none;">
+                    <li>History of photography</li>
+                    <li>Understanding beauty of photography</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="index-courses">
+        <div class="slideshow-container" style="width: 45%;">
+          <div class="mySlides fade">
+            <img src="images/DSC_3209.JPG" style="width: 100%" />
+          </div>
+          <div class="mySlides fade">
+            <img src="images/_DSC0974.JPG" style="width: 100%" />
+          </div>
+          <div class="mySlides fade">
+            <img src="images/DSC_8231.jpg" style="width: 100%" />
+          </div> 
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <div class="course-btn-container">
+            <a class="course-btn" href="beginner.html">Go to Basic Course</a>
+        </div>
+        <br />
+        <div style="text-align: center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <section>
+
+
+    </section>
+</main>
+<script src="scripts.js"></script>
+</body>
+</html>

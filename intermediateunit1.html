@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Photography School Courses</title>
+    <link rel="stylesheet" href="unitstyle.css">
+</head>
+<body>
+<main>
+    <section id="home" class="hero">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 style="font-size: 60px; font-weight: lighter;">unit1- retouching</h1>
+    </section>
+    <div class="container">
+        <button class="open-btn" onclick="toggleSidebar()"><span id="btn-content">☰</span></button>
+        <div class="sidebar">
+            <br><br>
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="beginner.html">Beginner</a></li>               
+                <li><a href="intermediate.html">Intermediate</a></li>
+                <li><a href="advanced.html">Advanced</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="unitcontent">
+        <p style="font-size: large;">Welcome to Unit 4! In this unit, we'll explore the concept of aperture and how it affects your photos. You'll learn how to control depth of field and use aperture settings creatively.</p>
+
+
+        <h2>Shutter speed</h2>
+        <p>Aperture refers to the opening in a lens through which light passes to enter the camera. It is measured in f-stops (e.g., f/2.8, f/5.6). A larger aperture (smaller f-stop number) lets in more light and results in a shallow depth of field, while a smaller aperture (larger f-stop number) lets in less light and results in a greater depth of field.</p>
+        <div class="unitcontentimg"> </div>
+        <h2>Deptyh of field</h2>
+        <p>Depth of field is the distance between the nearest and farthest objects in a scene that appear acceptably sharp in an image. A shallow depth of field (achieved with a larger aperture) isolates the subject from the background, creating a blurry background. A greater depth of field (achieved with a smaller aperture) keeps more of the scene in focus.</p>
+        <div class="unitcontentimg"> </div>
+        <ul>
+            <li><strong>Shallow Depth of Field:</strong> Use a larger aperture (e.g., f/2.8) for portraits to blur the background.</li>
+            <li><strong>Greater Depth of Field:</strong> Use a smaller aperture (e.g., f/16) for landscapes to keep everything in focus.</li>
+        </ul>
+        <div class="unitcontentimg"> </div>
+        <h2>Try it yourself</h2>
+        <p>Practice using different aperture settings. Set your camera to Aperture Priority mode (A or Av) and adjust the aperture value. Observe how the depth of field changes with different f-stop numbers. Take photos of the same scene with various apertures to see the effect on depth of field.</p>
+  </div>
+
+    <div class="unitnext">
+        <h1 style=" position: absolute; transform: translate(0%, -100%); color: aliceblue;"> Start next course or quiz? </h1>
+        <button class="unitnextbtn" onclick="nextunit('beginner', 5)">Next unit</button>
+        <dialog id="quiz-dialog">
+            <div class="quiztopcontainer">
+                <p id="question">Loading...</p>
+                <button onclick="closeDialog()" class="quizclosebtn">Close</button>
+            </div>
+            <div class="quiz-container">
+              <button class="quiz-option"></button>
+              <button class="quiz-option"></button>
+              <button class="quiz-option"></button>
+              <button class="quiz-option"></button>
+            </div>
+        </dialog>
+        <button onclick="openDialog()" id="quizopenbtn">Start Quiz</button>
+    </div>
+</main>
+<script src="unitscrpits.js"></script>
+</body>
+</html>
